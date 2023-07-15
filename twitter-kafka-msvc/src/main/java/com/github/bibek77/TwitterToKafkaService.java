@@ -3,6 +3,7 @@ package com.github.bibek77;
 import com.github.bibek77.config.TwitterToKafkaServiceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,9 @@ public class TwitterToKafkaService implements CommandLineRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaService.class);
     private final TwitterToKafkaServiceConfig twitterToKafkaServiceConfig;
+
+//    @Autowired
+//    private TwitterToKafkaServiceConfig twitterToKafkaServiceConfig;
 
     public TwitterToKafkaService(TwitterToKafkaServiceConfig configData) {
         this.twitterToKafkaServiceConfig = configData;
